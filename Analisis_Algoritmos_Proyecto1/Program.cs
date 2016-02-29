@@ -14,8 +14,8 @@ namespace Analisis_Algoritmos_Proyecto1
         static void Main(string[] args)
         {
             //bubble sort
-            //insert sort
-            //selection sort
+            //insert sort --laur
+            //selection sort --laur
             //merge sort
             //heap sort en un mismo arreglo
             //quick sort en un mismo arreglo
@@ -57,18 +57,18 @@ namespace Analisis_Algoritmos_Proyecto1
 
 
             #region
-            /*
+            
             //Bubble sort
-            for (int i = 0; i < 6; i++)
+           // for (int i = 0; i < 4; i++)
             {
-                 for (int j = 0; j < 10; j++)
+                 for (int j = 0; j < 1; j++)
                  {
-                     bubble_sort(1000000);
+                     bubble_sort(size[4]);
                  }
-                 string path = "C:\\Users\\Ithamar\\Desktop\\Clases\\Analisis de Algoritmos\\Results\\bubble.csv";
+                 string path = "C:\\Users\\Ithamar\\Desktop\\Clases\\Analisis de Algoritmos\\Results\\bubble2.csv";
                  File.AppendAllText(path, Environment.NewLine);
              }
-
+            /*
             //Insertion Sort
              for (int i = 0; i < 6; i++)
              {
@@ -83,18 +83,20 @@ namespace Analisis_Algoritmos_Proyecto1
             #endregion
 
             #region
-
+            /*
             //Heap Sort
             Thread th = new Thread(RunHeapSort);
             th.Start();
-            
-            //Quick sort
-           // Thread tq = new Thread(RunQuickSort);
-            //tq.Start();
 
             //Radix Sort
             Thread tr = new Thread(RunRadixSort);
             tr.Start();
+            */
+            #endregion
+
+            #region
+
+            //RunQuickSort();
 
             #endregion
 
@@ -122,7 +124,10 @@ namespace Analisis_Algoritmos_Proyecto1
                 {
                     Stopwatch sw = new Stopwatch();
                     sw.Start();
-                    QuickSort_Recursive(number,0, size[i]-1);
+                    List<int> list = RandomList(size[i]);
+                    //DumpList(list);
+                    MyQuickSort(list, 0, list.Count);
+                    //DumpList(list);
                     sw.Stop();
 
                     File.AppendAllText(path, sw.Elapsed.ToString() + ",");
@@ -269,11 +274,8 @@ namespace Analisis_Algoritmos_Proyecto1
                     }
                 }
             }
-
             sw.Stop();
-
-            string path = "C:\\Users\\Ithamar\\Desktop\\Clases\\Analisis de Algoritmos\\Results\\bubble.csv";
-            
+            string path = "C:\\Users\\Ithamar\\Desktop\\Clases\\Analisis de Algoritmos\\Results\\bubble2.csv";
             File.AppendAllText(path, sw.Elapsed.ToString() + ",");
             
             Console.WriteLine("Tiempo: " + sw.Elapsed);
@@ -406,43 +408,72 @@ namespace Analisis_Algoritmos_Proyecto1
         }
 
 
-        static public int Partition(int[] numbers, int left, int right)
+        static List<int> RandomList(int size)
         {
-            int pivot = numbers[left];
+            List<int> ret = new List<int>(size);
+            Random rand = new Random(1);
+            for (int i = 0; i < size; i++)
+            {
+                ret.Add(rand.Next(size));
+            }
+            return ret;
+        }
+
+        static int MyPartition(List<int> list, int left, int right)
+        {
+            int start = left;
+            int pivot = list[start];
+            left++;
+            right--;
+
             while (true)
             {
-                while (numbers[left] < pivot)
+                while (left <= right && list[left] <= pivot)
                     left++;
 
-                while (numbers[right] > pivot)
+                while (left <= right && list[right] > pivot)
                     right--;
 
-                if (left < right)
+                if (left > right)
                 {
-                    int temp = numbers[right];
-                    numbers[right] = numbers[left];
-                    numbers[left] = temp;
+                    list[start] = list[left - 1];
+                    list[left - 1] = pivot;
+
+                    return left;
                 }
-                else
-                {
-                    return right;
-                }
+
+
+                int temp = list[left];
+                list[left] = list[right];
+                list[right] = temp;
+
             }
         }
 
-        static public void QuickSort_Recursive(int[] arr, int left, int right)
+        static void MyQuickSort(List<int> list, int left, int right)
         {
-            // For Recusrion
+            if (list == null || list.Count <= 1)
+                return;
+
             if (left < right)
             {
-                int pivot = Partition(arr, left, right);
-
-                if (pivot > 1)
-                    QuickSort_Recursive(arr, left, pivot - 1);
-
-                if (pivot + 1 < right)
-                    QuickSort_Recursive(arr, pivot + 1, right);
+                int pivotIdx = MyPartition(list, left, right);
+                //Console.WriteLine("MQS " + left + " " + right);
+                //DumpList(list);
+                MyQuickSort(list, left, pivotIdx - 1);
+                MyQuickSort(list, pivotIdx, right);
             }
         }
+
+        static void DumpList(List<int> list)
+        {
+            list.ForEach(delegate (int val)
+            {
+                Console.Write(val);
+                Console.Write(",");
+            });
+            Console.WriteLine();
+        }
+
     }
 }
