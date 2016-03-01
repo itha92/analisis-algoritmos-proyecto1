@@ -4,3 +4,15 @@ c:\users\ithamar\documents\visual studio 2015\Projects\Analisis_Algoritmos_Proye
 c:\users\ithamar\documents\visual studio 2015\Projects\Analisis_Algoritmos_Proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.csprojResolveAssemblyReference.cache
 c:\users\ithamar\documents\visual studio 2015\Projects\Analisis_Algoritmos_Proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.exe
 c:\users\ithamar\documents\visual studio 2015\Projects\Analisis_Algoritmos_Proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.pdb
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\Analisis_Algoritmos_Proyecto1.exe.config
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.exe
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.pdb
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\Analisis_Algoritmos_Proyecto1.exe
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\Analisis_Algoritmos_Proyecto1.pdb
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\mscorlib.dll
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\normidna.nlp
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\normnfc.nlp
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\normnfd.nlp
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\normnfkc.nlp
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\bin\Debug\normnfkd.nlp
+C:\Users\wmejia\Documents\Visual Studio 2012\Projects\analisis-algoritmos-proyecto1\Analisis_Algoritmos_Proyecto1\obj\Debug\Analisis_Algoritmos_Proyecto1.csprojResolveAssemblyReference.cache

@@ -59,7 +59,7 @@ namespace Analisis_Algoritmos_Proyecto1
             #region
             
             //Bubble sort
-           // for (int i = 0; i < 4; i++)
+           /*/ for (int i = 0; i < 4; i++)
             {
                  for (int j = 0; j < 1; j++)
                  {
@@ -67,7 +67,7 @@ namespace Analisis_Algoritmos_Proyecto1
                  }
                  string path = "C:\\Users\\Ithamar\\Desktop\\Clases\\Analisis de Algoritmos\\Results\\bubble2.csv";
                  File.AppendAllText(path, Environment.NewLine);
-             }
+             }*/
             /*
             //Insertion Sort
              for (int i = 0; i < 6; i++)
@@ -83,7 +83,7 @@ namespace Analisis_Algoritmos_Proyecto1
             #endregion
 
             #region
-            /*
+            
             //Heap Sort
             Thread th = new Thread(RunHeapSort);
             th.Start();
@@ -91,7 +91,7 @@ namespace Analisis_Algoritmos_Proyecto1
             //Radix Sort
             Thread tr = new Thread(RunRadixSort);
             tr.Start();
-            */
+            
             #endregion
 
             #region
